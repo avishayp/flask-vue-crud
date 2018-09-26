@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+  server:
+    build: server
+    ports:
+      - 5000:5000
+    volumes:
+      - ./server:/srv
+
+  client:
+    build: client
+    ports:
+      - 8080:8080
+    volumes:
+      - ./client:/app
